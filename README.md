@@ -1,47 +1,57 @@
-## Part1 How to Open a Browser
+## Selenium WebDriver API 的基础用法 
+#######均整理自网络，仅供学习参考
 
-  	import java.io.File;
-  
-  	import org.openqa.selenium.WebDriver;
-  	import org.openqa.selenium.chrome.ChromeDriver;
-  	import org.openqa.selenium.firefox.*;
-  	import org.openqa.selenium.ie.InternetExplorerDriver;
-  
-  	public class OpenBrowser {
-  	
-  		public static void main(String[] args){
-  		
-  			//-- For Chrome --//
-  			WebDriver drChrome = new ChromeDriver();
-  		
-  				// - For Specified Path - //
-  			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
-  			System.setProperty("webdriver.chrome.bin", "---CHROME BIN PATH---");
-  			
-  			WebDriver drChrome_2 = new ChromeDriver();
-  			
-  			//-- For FireFox--//
-  				//- Default Path - //
-  			
-  			WebDriver drFF = new FirefoxDriver();
-  		
-  				// - For Specified Path - 1//
-  			File pathToFirefoxBinary = new File("--Firefox Path--");
-  			
-  			WebDriver drFF_bin_1 = new FirefoxDriver();
-  			
-  				// - For Specified Path - 2//
-  			FirefoxBinary firefox_binary = new FirefoxBinary(pathToFirefoxBinary);
-  			
-  			WebDriver drFF_bin_2 = new FirefoxDriver(firefox_binary,null);
-  			
-  			//-- For IE --//
-  			File file = new File("---IEDriverServer Path---");
-  			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-  			
-  			WebDriver dr_ie = new InternetExplorerDriver();
-  		
-  			
-  		}
-  	
-  	}
+
++  [Open Browser](https://github.com/peacehep/SeleniumDemo/blob/Selenium/OpenBrowser.java) 
+
+>Default Path 
+>
+>Specified Path
+
++  [Other Browser Action](https://github.com/peacehep/SeleniumDemo/blob/Selenium/OtherBrowserAction.java)
+	
+>close() or quit()
+>
+>maximize()
+>
+>SetSize()
+
++  [Navigate URL](https://github.com/peacehep/SeleniumDemo/blob/Selenium/NavURL.java)
+
+>get()
+>
+>navigate().to() and navigate().to().back()/forward()
+
++  [Locate Object](https://github.com/peacehep/SeleniumDemo/blob/Selenium/LocateObject.java)
+	
+>Locate one object
+>
+>Locate multiple objects
+
++  [Operate Element](https://github.com/peacehep/SeleniumDemo/blob/Selenium/ElementOperate.java)
+
+>sendKeys()
+>
+>clear()
+>
+>click()
+
++  [Group Buttons](https://github.com/peacehep/SeleniumDemo/blob/Selenium/ButtonGroup.java)
+	
+>Locate father div tag and then to locate all the following objects
+
++  [BreadCrumb](https://github.com/peacehep/SeleniumDemo/blob/Selenium/BreadCrumb.java)
+
+>Hiberarchy
+
++  [Popup Windows](https://github.com/peacehep/SeleniumDemo/blob/Selenium/PopupWindow.java)
+
+>Alert Class
+> 
+>Alert, Confirm and Prompt
+> 
+>switchTo().alert()
+> 
+>getText()
+> 
+>accept() and dismiss()
