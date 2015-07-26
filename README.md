@@ -55,3 +55,98 @@
 >getText()
 > 
 >accept() and dismiss()
+
++  [iframe](https://github.com/peacehep/SeleniumDemo/blob/Selenium/iframe.java)
+
+>switchTo().frame()
+>
+>switchTo().defaultContent()
+
++  [Dropdown List](https://github.com/peacehep/SeleniumDemo/blob/Selenium/DropdownList.java)
+
+>Class:Select
+>
+>select.selectByIndex("index");
+>
+>select.selectByValue("value");
+
+
++  [Cookies](https://github.com/peacehep/SeleniumDemo/blob/Selenium/CookiesTest.java)
+
+> domain,name,value,expriy,path
+> 
+> driver.manage().addCookie();
+> 
+> driver.manage().getCookie();
+> 
+> dr.manage().deleteCookieNamed("Cookies Name");
+> 
+> dr.manage().deleteCookie("CookieName");
+> 
+> dr.manage().deleteAllCookies();
+
++  [Take Screenshot](https://github.com/peacehep/SeleniumDemo/blob/Selenium/TakeScreenshot.java)
+
+		import org.openqa.selenium.TakesScreenshot;
+		File screenshotFile = ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+
++  [Firefox Profile](https://github.com/peacehep/SeleniumDemo/blob/Selenium/FFProfile.java)
+
+>add new profile
+>
+>use existing profile
+>
+>temporary sepecified plug-in
+>
+>enable function
+>
+>firefox proxy setting
+
++  [Element Attribute](https://github.com/peacehep/SeleniumDemo/blob/Selenium/ElementAttribute.java)
+
+>getAttribute();
+>getText();
+>getCssValue();
+
++  [Element Status Check](https://github.com/peacehep/SeleniumDemo/blob/Selenium/ElementStatusCheck.java)
+
+>isDisplayed();
+>isSelected();
+>isEnabled();
+
+
++  [Execute JavaScript](https://github.com/peacehep/SeleniumDemo/blob/Selenium/ExecuteJS.java)
+
+		JavascriptExecutor)dr).executeScript("alert(\"hello,this is a alert!\")");
+		((JavascriptExecutor)dr).executeScript("$(arguments[0]).fadeOut();", button);
+
++  [Drag and Drop](https://github.com/peacehep/SeleniumDemo/blob/Selenium/DragDrop.java)
+
+		(new Actions(dr)).dragAndDrop(from,to).perform();
+>Other operations in Action Class (KeyDown, KeyUp, Click,sendKeys,doubleClick,clickAndHold, release,moveToElement, contextClick)
+
++  [Download and Upload](https://github.com/peacehep/SeleniumDemo/blob/Selenium/DownloadUpload.java)
+
+>File Class
+>
+>sendKeys
+>
+>setPreference
+
++  [WaitElement](https://github.com/peacehep/SeleniumDemo/blob/Selenium/WaitElement.java)
+
+>explicit wait
+
+			explicit_wait.until(new ExpectedCondition<WebElement>(){
+			
+			@Override
+			public WebElement apply(WebDriver d){
+				
+				return d.findElement(By.id("b"));
+			}
+			}).click();
+
+
+>implicit wait
+
+		dr.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
