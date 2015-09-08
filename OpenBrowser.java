@@ -21,7 +21,7 @@ public class OpenBrowser {
 		
 			// - For Specified Path - //
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.bin", "---CHROME BIN PATH---");
+		System.setProperty("webdriver.chrome.bin", "C:\\Documents and Settings\\xxx\\Local Settings\\Application Data\\Google\\Chrome\\Application\\chrome.exe");
 		
 		WebDriver drChrome_2 = new ChromeDriver();
 		
